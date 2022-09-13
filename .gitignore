@@ -6,3 +6,5 @@ mealmulticarousel.js
 product.js
 productdetail.js
 productdetaildisplay.js
+.DS_Store
+.gitignore
