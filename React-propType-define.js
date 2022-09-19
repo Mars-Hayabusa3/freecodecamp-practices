@@ -1,6 +1,6 @@
 // 2021年9月19日
 // freeCodeCamp > Front End Development Libraries > React 第17題
-// 定義 props 需要是那種數字種類
+// 定義 props 需要是哪種數字種類
 
 Items.propTypes = {
     quantity: PropTypes.number.isRequired
