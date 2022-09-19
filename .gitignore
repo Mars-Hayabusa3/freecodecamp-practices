@@ -10,3 +10,4 @@ productdetaildisplay.js
 .gitignore
 Sumokyokai-ajax.js
 Sumokyokai-getMatchRikishi.js
+Sumokyokai-setDetail.js
