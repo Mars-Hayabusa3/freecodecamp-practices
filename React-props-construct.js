@@ -1,3 +1,5 @@
+// 2022年9月19日
+
 class StatefulComponent extends React.Component {
     constructor(props) {
       super(props);
