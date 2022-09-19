@@ -8,3 +8,5 @@ productdetail.js
 productdetaildisplay.js
 .DS_Store
 .gitignore
+Sumokyokai-ajax.js
+Sumokyokai-getMatchRikishi.js
