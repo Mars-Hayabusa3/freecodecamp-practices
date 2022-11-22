@@ -1,0 +1,15 @@
+<script>
+    // 用瀏覽器內建的 "navigator" 定位現在位置
+    // Add your code below this line
+    if (navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(function(position) {
+        document.getElementById('data').innerHTML="latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude;
+        });
+    }
+    // latitude: 25.0272612
+    // longitude: 121.525599
+    // Add your code above this line
+</script>
+<h4>You are here:</h4>
+<div id="data">
+</div>
