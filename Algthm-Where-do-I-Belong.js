@@ -1,11 +1,13 @@
 function getIndexToIns(arr, num) {
     arr.sort((a, b) => a - b);
+    // 先 sort，由小到大排列
   
     for (let i = 0; i < arr.length; i++){
       if (arr[i] >= num) {
         return i;
       }
     }
+    // if "arr" 裡面編號第幾個項目大於 "num" 則回傳第幾個的項目值 i
   
     return arr.length;
   }
