@@ -1,0 +1,24 @@
+// 在兩個無關的 objects 裡面加一個共同的項目/function
+
+let bird = {
+    name: "Donald",
+    numLegs: 2
+  };
+  
+  let boat = {
+    name: "Warrior",
+    type: "race-boat"
+  };
+  
+  // Only change code below this line
+  const glideMixin = function(obj) {
+    obj.glide = function() {
+      console.log("Glide!");
+    }
+  }
+  
+  glideMixin(bird);
+  glideMixin(boat);
+  
+  bird.glide();
+  boat.glide();
