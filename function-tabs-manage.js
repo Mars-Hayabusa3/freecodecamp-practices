@@ -1,3 +1,6 @@
+// Unfortunately, splice changes the original array it is called on,
+// so the second call to it used a modified array, and gave unexpected results.
+
 // tabs is an array of titles of each site open within the window
 const Window = function(tabs) {
     this.tabs = tabs; // We keep a record of the array inside the object
@@ -20,9 +23,11 @@ const Window = function(tabs) {
   
     // Only change code below this line
   
-    const tabsBeforeIndex = this.tabs.splice(0, index); // Get the tabs before the tab
-    const tabsAfterIndex = this.tabs.splice(index); // Get the tabs after the tab
-    // 本來是 splice(index + 1)，錯在要 splice 的起始位置是 index 值的位置，而非 index + 1
+    const tabsBeforeIndex = this.tabs.slice(0, index); // Get the tabs before the tab
+    const tabsAfterIndex = this.tabs.slice(index + 1); // Get the tabs after the tab
+    // 本來是 splice(index + 1)，錯在「要用 slice」 instead of splice
+    // 或者保留 splice
+    // 而使用 const tabsAfterIndex = this.tabs.splice(1);
     this.tabs = tabsBeforeIndex.concat(tabsAfterIndex); // Join them together
   
     // Only change code above this line
