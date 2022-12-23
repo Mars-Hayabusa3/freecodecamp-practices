@@ -17,7 +17,7 @@ class MyComponent extends React.Component {
        <div>
          <button onClick={this.toggleDisplay}>Toggle Display</button>
          {this.state.display && <h1>Displayed!</h1>}
-         // state: display = true 時才顯示 h1 "Displayed"
+         {/* state: display = true 時才顯示 h1 "Displayed" */}
        </div>
     );
   }
